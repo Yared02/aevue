@@ -38,6 +38,11 @@ class _MainScreenState extends ConsumerState<MainScreen> {
             // Display a search TextField on the ProductsScreen and a static title on the FavoritesScreen
             return _selectedIndex == 0
                 ? TextField(
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 17,
+                      color: Colors.black,
+                    ),
                     decoration: InputDecoration(
                       hintText: 'Search products...',
                     ),
@@ -65,7 +70,7 @@ class _MainScreenState extends ConsumerState<MainScreen> {
           ),
         ],
         currentIndex: _selectedIndex, // Highlight the currently selected tab
-        selectedItemColor: Colors.amber[800], // Color for the selected tab
+        selectedItemColor: Colors.red, // Color for the selected tab
         onTap: _onItemTapped, // Handle tab taps
       ),
     );
